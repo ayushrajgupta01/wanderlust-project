@@ -97,6 +97,12 @@ app.use((req,res, next) => {
 //     res.send(registeredUser);
 // });
 
+//Serve a homepage
+app.get("/", (req, res) => {
+    res.render("home"); // make sure you have views/home.ejs
+});
+
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
