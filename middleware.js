@@ -8,7 +8,7 @@ module.exports.isLoggedIn = (req,res,next) => {
     //passport stores user info in req.user so if user is logged out then it stores null value and if user is logged in then it stores his info 
     if(!req.isAuthenticated()) {
         req.session.redirectUrl= req.originalUrl;
-        req.flash("error", "you must be logged in to create listing");
+        req.flash("error", "you must be logged in to access that page");
         return res.redirect("/login");
     }
     next();
