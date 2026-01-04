@@ -62,6 +62,3 @@ The project focuses on building a real-world, scalable web application with user
 
 ---
 
-
-## 📂 Project Structure
-
